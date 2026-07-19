@@ -1,0 +1,40 @@
+.features {
+  background: #111827;
+  padding: 80px 60px;
+}
+
+.features-title {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #334155;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+}
+
+.feature-card h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
