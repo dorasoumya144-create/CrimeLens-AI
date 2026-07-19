@@ -1,10 +1,15 @@
 import "./Dashboard.css";
 import CrimeChart from "../charts/CrimeChart";
+import CrimeTable from "../tables/CrimeTable";
+import CrimeMap from "../maps/CrimeMap";
+import Filters from "../components/Filters";
+import StatsCard from "../components/StatsCard";
+
 function Dashboard() {
   return (
     <section className="dashboard">
       <h2 className="dashboard-title">Crime Analytics Dashboard</h2>
-
+<Filters />
       <div className="dashboard-cards">
         <div className="dashboard-card">
           <h3>250K+</h3>
@@ -28,19 +33,21 @@ function Dashboard() {
       </div>
 
       <div className="chart-box">
-  <h3>📈 Crime Trend Analysis</h3>
-  <CrimeChart />
-</div>
+        <h3>📈 Crime Trend Analysis</h3>
+        <CrimeChart />
+      </div>
 
       <div className="map-box">
-        <h3>🗺️ Crime Hotspot Map</h3>
-        <p>Interactive map will be added here.</p>
-      </div>
+  <h3>🗺️ Crime Hotspot Map</h3>
+  <CrimeMap />
+</div>
 
       <div className="prediction-box">
         <h3>🤖 AI Prediction</h3>
         <p>Machine Learning prediction results will appear here.</p>
       </div>
+
+      <CrimeTable />
     </section>
   );
 }
