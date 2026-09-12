@@ -43,10 +43,22 @@ function Dashboard() {
 </div>
 
       <div className="prediction-box">
-        <h3>🤖 AI Prediction</h3>
-        <p>Machine Learning prediction results will appear here.</p>
-      </div>
+  <h3>🤖 AI Crime Prediction</h3>
 
+  <div className="prediction-card">
+    <h4>Prediction for Next Month</h4>
+
+    <p>🔺 Theft Cases: <strong>+12%</strong></p>
+
+    <p>🔻  Robbery Cases: <strong>-5%</strong></p>
+
+    <p>🔺 Assault Cases: <strong>+3%</strong></p>
+
+    <p>⚠️ High Risk District: <strong>Bhubaneswar</strong></p>
+
+    <button>Generate Prediction</button>
+  </div>
+</div>
       <CrimeTable />
     </section>
   );

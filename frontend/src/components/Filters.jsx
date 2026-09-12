@@ -3,7 +3,6 @@ import "./Filters.css";
 function Filters() {
   return (
     <div className="filters">
-
       <select>
         <option>Odisha</option>
         <option>Andhra Pradesh</option>
@@ -26,7 +25,6 @@ function Filters() {
       </select>
 
       <button>Search</button>
-
     </div>
   );
 }

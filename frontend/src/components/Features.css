@@ -1,6 +1,6 @@
 .features {
   background: #111827;
-  padding: 80px 60px;
+  padding: 80px 20px;
 }
 
 .features-title {
@@ -12,8 +12,10 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .feature-card {
@@ -22,6 +24,7 @@
   border-radius: 15px;
   border: 1px solid #334155;
   transition: 0.3s;
+  min-height: 180px;
 }
 
 .feature-card:hover {

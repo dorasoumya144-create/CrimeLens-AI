@@ -1,0 +1,39 @@
+.crime-table {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.crime-table h3 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.crime-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.crime-table th {
+  background: #2563eb;
+  color: white;
+  padding: 15px;
+}
+
+.crime-table td {
+  padding: 15px;
+  color: #ebedf0;
+  border-bottom: 1px solid #334155;
+}
+
+.crime-table tr:hover {
+  background: #334155;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}

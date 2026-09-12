@@ -1,34 +1,19 @@
+import { useEffect, useState } from "react";
+import "./CrimeTable.css";
+
 function CrimeTable() {
-  const crimes = [
-    {
-      id: 101,
-      type: "Theft",
-      location: "Rayagada",
-      status: "Solved",
-    },
-    {
-      id: 102,
-      type: "Robbery",
-      location: "Bhubaneswar",
-      status: "Pending",
-    },
-    {
-      id: 103,
-      type: "Assault",
-      location: "Cuttack",
-      status: "Investigating",
-    },
-    {
-      id: 104,
-      type: "Burglary",
-      location: "Berhampur",
-      status: "Solved",
-    },
-  ];
+  const [crimes, setCrimes] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/crimes")
+      .then((response) => response.json())
+      .then((data) => setCrimes(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
   return (
     <div className="crime-table">
-      <h3>Recent Crime Records</h3>
+      <h3>📋 Recent Crime Records</h3>
 
       <table>
         <thead>
@@ -41,14 +26,22 @@ function CrimeTable() {
         </thead>
 
         <tbody>
-          {crimes.map((crime) => (
-            <tr key={crime.id}>
-              <td>{crime.id}</td>
-              <td>{crime.type}</td>
-              <td>{crime.location}</td>
-              <td>{crime.status}</td>
+          {crimes.length > 0 ? (
+            crimes.map((crime) => (
+              <tr key={crime.id}>
+                <td>{crime.id}</td>
+                <td>{crime.type}</td>
+                <td>{crime.location}</td>
+                <td>{crime.status}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="4" className="no-data">
+                No crime records found.
+              </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
